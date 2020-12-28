@@ -52,7 +52,7 @@ public enum BackgroundPosition {
         case let .coords(x, y):
             return "\(x.description) \(y.description)"
         default:
-            return String(describing: self)
+            return String(describing: self).separateWordsInCamelCase()
         }
     }
 }
