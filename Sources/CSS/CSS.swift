@@ -5,7 +5,7 @@
 //  Created by Carson Katri on 9/4/19.
 //
 
-import SwiftUI
+import Foundation
 
 public protocol CSS {
     func string() -> String
