@@ -34,6 +34,10 @@ public enum CSSUnit {
     case auto
     case fraction(Int, Int)
     case calc(String)
+    case percentOfViewPortHeight(Int)
+    case percentOfViewPortWidth(Int)
+    case percentageOfViewPortMinDimension(Int)
+    case percentageOfViewPortMaxDimension(Int)
     
     public var description: String {
         switch self {
@@ -53,6 +57,14 @@ public enum CSSUnit {
             return "calc(\(a))"
         case let .fraction(top, bottom):
             return Fraction(top, over: bottom).description
+        case let .percentOfViewPortHeight(a):
+            return "\(a)vh"
+        case let .percentOfViewPortWidth(a):
+            return "\(a)vw"
+        case let .percentageOfViewPortMinDimension(a):
+            return "\(a)vmin"
+        case let .percentageOfViewPortMaxDimension(a):
+            return "\(a)vmax"
         }
     }
 }
