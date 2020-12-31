@@ -56,7 +56,7 @@ public extension CSSSelector {
             for block in selectors {
                 var select = Select()
                 // Merge the selectors
-                select.selector = "\(selector)\(block.selector)"
+                select.selector = "\(selector) \(block.selector)"
                 select.children = block.children
                 res += select.string()
             }
