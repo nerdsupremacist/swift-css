@@ -290,6 +290,8 @@ public enum Color {
     case whitesmoke
     case yellow
     case yellowgreen
+
+    case transparent
     
     public static func linearGradient(_ direction: LinearGradient.Direction, _ stops: Color...) -> Color {
         .linearGradient(direction, stops)
